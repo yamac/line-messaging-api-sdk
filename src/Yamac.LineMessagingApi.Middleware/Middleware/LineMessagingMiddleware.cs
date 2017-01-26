@@ -14,9 +14,7 @@ namespace Yamac.LineMessagingApi.Middleware
 
         private readonly RequestDelegate _next;
 
-        private readonly LineMessagingMiddlewareOptions _middlewareOptions;
-
-        private readonly LineMessagingOptions _options;
+        private readonly LineMessagingMiddlewareOptions _options;
 
         private readonly ILineMessagingRequestHandler _handler;
 
@@ -26,13 +24,11 @@ namespace Yamac.LineMessagingApi.Middleware
 
         public LineMessagingMiddleware(
             RequestDelegate next,
-            IOptions<LineMessagingMiddlewareOptions> middlewareOptions,
-            IOptions<LineMessagingOptions> options,
+            IOptions<LineMessagingMiddlewareOptions> options,
             ILineMessagingRequestHandler handler,
             ILoggerFactory loggerFactory)
         {
             _next = next;
-            _middlewareOptions = middlewareOptions?.Value ?? throw new ArgumentNullException(nameof(middlewareOptions));
             _options = options?.Value ?? throw new ArgumentNullException(nameof(_options));
             _handler = handler ?? throw new ArgumentNullException(nameof(_handler));
             _logger = loggerFactory.CreateLogger<LineMessagingMiddleware>();
@@ -68,7 +64,7 @@ namespace Yamac.LineMessagingApi.Middleware
             }
 
             // Handle only if the request path matches.
-            if (!request.Path.Equals(_middlewareOptions.RequestPath, StringComparison.Ordinal))
+            if (!request.Path.Equals(_options.WebhookPath, StringComparison.Ordinal))
             {
                 return false;
             }

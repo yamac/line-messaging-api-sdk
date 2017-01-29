@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
-using Yamac.LineMessagingApi.Common.Utilities.Json;
+using Yamac.LineMessagingApi.Utilities.Json;
 
 namespace Yamac.LineMessagingApi.Message.Template
 {
@@ -12,14 +12,6 @@ namespace Yamac.LineMessagingApi.Message.Template
     {
         [JsonConverter(typeof(StringEnumConverter), true)]
         public abstract ActionType Type { get; }
-    }
-
-    public enum ActionType
-    {
-        Postback,
-        Message,
-        Uri,
-        Unknown,
     }
 
     public class JsonActionConverter : JsonCreationConverter<Action>

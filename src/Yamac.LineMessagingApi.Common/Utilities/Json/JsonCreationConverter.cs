@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace Yamac.LineMessagingApi.Common.Utilities.Json
+namespace Yamac.LineMessagingApi.Utilities.Json
 {
     public abstract class JsonCreationConverter<T> : JsonConverter
     {

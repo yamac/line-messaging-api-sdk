@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using System;
 using System.Reflection;
 
-namespace Yamac.LineMessagingApi.Common.Utilities.Json
+namespace Yamac.LineMessagingApi.Utilities.Json
 {
     public class JsonEpochMillisDateTimeConverter : DateTimeConverterBase
     {

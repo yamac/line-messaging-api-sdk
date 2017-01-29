@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
-using Yamac.LineMessagingApi.Common.Utilities.Json;
+using Yamac.LineMessagingApi.Utilities.Json;
 
 namespace Yamac.LineMessagingApi.Event
 {
@@ -18,18 +18,6 @@ namespace Yamac.LineMessagingApi.Event
 
         [JsonConverter(typeof(JsonEpochMillisDateTimeConverter))]
         public DateTimeOffset Timestamp { get; set; }
-    }
-
-    public enum EventType
-    {
-        Message,
-        Follow,
-        Unfollow,
-        Join,
-        Leave,
-        Postback,
-        Beacon,
-        Unknown,
     }
 
     public class JsonEventConverter : JsonCreationConverter<Event>

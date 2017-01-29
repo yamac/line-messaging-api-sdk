@@ -10,9 +10,4 @@ namespace Yamac.LineMessagingApi.Event
 
         public BeaconType Type { get; set; }
     }
-
-    public enum BeaconType
-    {
-        Enter,
-    }
 }

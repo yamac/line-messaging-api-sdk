@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
-using Yamac.LineMessagingApi.Common.Utilities.Json;
+using Yamac.LineMessagingApi.Utilities.Json;
 
 namespace Yamac.LineMessagingApi.Event
 {
@@ -15,14 +15,6 @@ namespace Yamac.LineMessagingApi.Event
 
         [JsonIgnore]
         public abstract string SenderId { get; }
-    }
-
-    public enum SourceType
-    {
-        User,
-        Group,
-        Room,
-        Unknown,
     }
 
     public class JsonSourceConverter : JsonCreationConverter<Source>

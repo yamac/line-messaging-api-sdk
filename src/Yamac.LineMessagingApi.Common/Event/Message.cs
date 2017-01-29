@@ -3,7 +3,7 @@ using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 using System;
-using Yamac.LineMessagingApi.Common.Utilities.Json;
+using Yamac.LineMessagingApi.Utilities.Json;
 
 namespace Yamac.LineMessagingApi.Event
 {
@@ -14,17 +14,6 @@ namespace Yamac.LineMessagingApi.Event
         public abstract MessageType Type { get; }
 
         public string Id { get; set; }
-    }
-
-    public enum MessageType
-    {
-        Text,
-        Image,
-        Video,
-        Audio,
-        Location,
-        Sticker,
-        Unknown,
     }
 
     public class JsonMessageConverter : JsonCreationConverter<Message>

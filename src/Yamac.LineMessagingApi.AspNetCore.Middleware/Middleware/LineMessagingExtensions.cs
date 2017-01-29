@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Options;
 using System;
 
-namespace Yamac.LineMessagingApi.Middleware
+namespace Yamac.LineMessagingApi.AspNetCore.Middleware
 {
     public static class LineMessagingExtensions
     {

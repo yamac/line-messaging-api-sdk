@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Yamac.LineMessagingApi.Middleware
+namespace Yamac.LineMessagingApi.AspNetCore.Middleware
 {
     public interface ILineMessagingRequestHandler
     {

@@ -1,4 +1,4 @@
-﻿namespace Yamac.LineMessagingApi.Middleware
+﻿namespace Yamac.LineMessagingApi.AspNetCore.Middleware
 {
     public class LineMessagingMiddlewareOptions
     {

@@ -3,10 +3,11 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using System;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yamac.LineMessagingApi.Middleware
+namespace Yamac.LineMessagingApi.AspNetCore.Middleware
 {
     public class LineMessagingMiddleware
     {
@@ -58,7 +59,7 @@ namespace Yamac.LineMessagingApi.Middleware
             }
 
             // Handle only POST method.
-            if (!HttpMethods.IsPost(request.Method))
+            if (string.Compare(HttpMethod.Post.Method, request.Method, true) != 0)
             {
                 return false;
             }

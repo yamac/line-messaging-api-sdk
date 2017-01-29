@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
 
-namespace Yamac.LineMessagingApi.Middleware
+namespace Yamac.LineMessagingApi.AspNetCore.Middleware
 {
     [JsonObject(NamingStrategyType = typeof(CamelCaseNamingStrategy))]
     public class LineMessagingRequest

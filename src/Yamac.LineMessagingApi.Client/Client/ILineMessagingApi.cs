@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
-using Yamac.LineMessagingApi.Message;
-using Yamac.LineMessagingApi.User;
+using Yamac.LineMessagingApi.Messages;
+using Yamac.LineMessagingApi.Users;
 
 namespace Yamac.LineMessagingApi.Client
 {

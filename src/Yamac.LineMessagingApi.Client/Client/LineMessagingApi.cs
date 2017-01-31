@@ -4,8 +4,8 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Yamac.LineMessagingApi.Message;
-using Yamac.LineMessagingApi.User;
+using Yamac.LineMessagingApi.Messages;
+using Yamac.LineMessagingApi.Users;
 
 namespace Yamac.LineMessagingApi.Client
 {

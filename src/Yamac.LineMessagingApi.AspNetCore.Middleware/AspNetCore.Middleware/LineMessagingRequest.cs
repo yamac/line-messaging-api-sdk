@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Collections.Generic;
-using Yamac.LineMessagingApi.Events;
+using Yamac.LineMessagingApi.Models.Events;
 
 namespace Yamac.LineMessagingApi.AspNetCore.Middleware
 {
@@ -9,6 +9,6 @@ namespace Yamac.LineMessagingApi.AspNetCore.Middleware
     public class LineMessagingRequest
     {
         [JsonConverter(typeof(JsonEventConverter))]
-        public List<Events.Event> Events { get; set; }
+        public List<Event> Events { get; set; }
     }
 }

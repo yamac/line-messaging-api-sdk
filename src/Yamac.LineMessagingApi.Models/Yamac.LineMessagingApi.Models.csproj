@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard1.4</TargetFramework>
-    <PackageId>Yamac.LineMessagingApi.Client</PackageId>
+    <PackageId>Yamac.LineMessagingApi.Models</PackageId>
     <PackageVersion>0.0.1-prerelease-9</PackageVersion>
     <Authors>yamac</Authors>
     <Description>The .NET SDK for the LINE Messaging API.</Description>
@@ -14,12 +14,9 @@
     <PackageReleaseNotes>Alpha release</PackageReleaseNotes>
     <RepositoryUrl />
     <RepositoryType />
-    <RootNamespace>Yamac.LineMessagingApi.Client</RootNamespace>
+    <RootNamespace>Yamac.LineMessagingApi.Models</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Yamac.LineMessagingApi.Models\Yamac.LineMessagingApi.Models.csproj" Version="0.0.1-prerelease-9" />
   </ItemGroup>
 </Project>

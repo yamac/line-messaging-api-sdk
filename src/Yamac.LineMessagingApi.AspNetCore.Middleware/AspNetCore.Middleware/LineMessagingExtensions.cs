@@ -18,6 +18,26 @@ namespace Yamac.LineMessagingApi.AspNetCore.Middleware
                 throw new ArgumentNullException(nameof(options));
             }
 
+            if (options.ChannelId == null)
+            {
+                throw new ArgumentNullException(nameof(options.ChannelId));
+            }
+
+            if (options.ChannelSecret == null)
+            {
+                throw new ArgumentNullException(nameof(options.ChannelSecret));
+            }
+
+            if (options.ChannelAccessToken == null)
+            {
+                throw new ArgumentNullException(nameof(options.ChannelAccessToken));
+            }
+
+            if (options.WebhookPath == null)
+            {
+                throw new ArgumentNullException(nameof(options.WebhookPath));
+            }
+
             return app.UseMiddleware<LineMessagingMiddleware>(Options.Create(options));
         }
     }

@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp1.0</TargetFramework>
     <PackageId>Yamac.LineMessagingApi.AspNetCore.Middleware</PackageId>
-    <PackageVersion>0.0.1-prerelease-8</PackageVersion>
+    <PackageVersion>0.0.1-prerelease-9</PackageVersion>
     <Authors>yamac</Authors>
     <Description>The .NET SDK for the LINE Messaging API.</Description>
     <Copyright>Copyright 2017 (c) yamac. All rights reserved.</Copyright>
@@ -14,7 +14,7 @@
     <PackageReleaseNotes>Alpha release</PackageReleaseNotes>
     <RepositoryUrl />
     <RepositoryType />
-    <RootNamespace>Yamac.LineMessagingApi</RootNamespace>
+    <RootNamespace>Yamac.LineMessagingApi.AspNetCore.Middleware</RootNamespace>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.0.3" />
@@ -23,7 +23,7 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Yamac.LineMessagingApi.Common\Yamac.LineMessagingApi.Common.csproj" Version="0.0.1-prerelease-8" />
-    <ProjectReference Include="..\Yamac.LineMessagingApi.Client\Yamac.LineMessagingApi.Client.csproj" Version="0.0.1-prerelease-8" />
+    <ProjectReference Include="..\Yamac.LineMessagingApi.Models\Yamac.LineMessagingApi.Models.csproj" Version="0.0.1-prerelease-9" />
+    <ProjectReference Include="..\Yamac.LineMessagingApi.Client\Yamac.LineMessagingApi.Client.csproj" Version="0.0.1-prerelease-9" />
   </ItemGroup>
 </Project>

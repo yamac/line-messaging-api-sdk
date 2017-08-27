@@ -17,6 +17,10 @@ namespace Yamac.LineMessagingApi.Client
 
         Task<Profile> GetProfileAsync(string userId);
 
+        Task<MemberProfile> GetGroupMemberProfileAsync(string groupId, string userId);
+
+        Task<MemberProfile> GetRoomMemberProfileAsync(string roomId, string userId);
+
         Task<ApiResponse> LeaveGroupAsync(string groupId);
 
         Task<ApiResponse> LeaveRoomAsync(string roomId);

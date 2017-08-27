@@ -100,6 +100,16 @@ namespace Yamac.LineMessagingApi.Client
             return await CallGetApiAsJsonResponseAsync<Profile>($"v2/bot/profile/{userId}");
         }
 
+        public async Task<MemberProfile> GetGroupMemberProfileAsync(string groupId, string userId)
+        {
+            return await CallGetApiAsJsonResponseAsync<MemberProfile>($"v2/bot/group/{groupId}/member/{userId}");
+        }
+
+        public async Task<MemberProfile> GetRoomMemberProfileAsync(string roomId, string userId)
+        {
+            return await CallGetApiAsJsonResponseAsync<MemberProfile>($"v2/bot/room/{roomId}/member/{userId}");
+        }
+
         public async Task<ApiResponse> LeaveGroupAsync(string groupId)
         {
             return await CallPostApiAsJsonResponseAsync<ApiResponse>($"v2/bot/group/{groupId}/leave");
